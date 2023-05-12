@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "gcp-monitoring"
+version = "0.1.0"
+description = ""
+authors = ["hsuyuming <abego452@gmail.com>"]
+readme = "README.md"
+packages = [{include = "gcp_monitoring"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+google-cloud-monitoring = "^2.14.2"
+opentelemetry-sdk = "^1.17.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
