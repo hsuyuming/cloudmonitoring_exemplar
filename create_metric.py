@@ -64,11 +64,11 @@ def generate_attachment_any(span_ctx: SpanContext):
 
 
 with tracer.start_as_current_span("demo") as span:
-    project=""
+    project="demo"
     trace_id = trace.format_trace_id(span.get_span_context().trace_id)
     span_id = trace.format_span_id(span.get_span_context().span_id)
     span_ctx = SpanContext(
-        span_name=f"projects/{project}/traces/{trace_id}/spans{span_id}"
+        span_name=f"projects/{project}/traces/{trace_id}/spans/{span_id}"
     )
     point = Point(
         {
@@ -147,7 +147,7 @@ value {
       }
       attachments {
         type_url: "type.googleapis.com/google.monitoring.v3.SpanContext"
-        value: "projects//traces/7c214d18ac67588bc8250e42bb7f8a81/spansa8d3f1261395ecd8"
+        value: "projects/demo/traces/7c214d18ac67588bc8250e42bb7f8a81/spans/a8d3f1261395ecd8"
       }
     }
   }
